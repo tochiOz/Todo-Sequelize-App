@@ -4,6 +4,9 @@
   "description": "A Node app using Sequelize and PostgreSql",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon src/index.js --exec babel-node",
+    "build": "babel src --out-dir dist",
+    "start": "node dist/index.js",
     "test": "jest"
   },
   "repository": {
@@ -33,6 +36,8 @@
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4"
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "nodemon": "^2.0.2"
   }
 }
