@@ -1,18 +1,28 @@
 import express from 'express';
 import morgan from 'morgan';
+import bodyParser from 'body-parser';
 
 //importing routes
-import projectRoutes from './routes/projects';
-import taskRoutes from './routes/task';
+import todoRoutes from './routes/todo';
+import indexRouters from './routes/index';
 
 const app = express();
 
 //middlewares
 app.use(morgan('dev'));
-// app.use(json());
+
+//parse incoming request data
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Setup a default catch-all route that sends back a welcome message in JSON format.
+// app.get('*', (req, res) =>
+// 	res.status(200).send({
+// 		message: 'You Have An Error, Check it out.'
+// 	})
+// );
 
 //routes
-app.use(projectRoutes);
-app.use(taskRoutes);
+app.use('/api/v1', [ indexRouters, todoRoutes ]);
 
 export default app;
