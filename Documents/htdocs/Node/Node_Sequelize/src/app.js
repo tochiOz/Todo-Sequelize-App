@@ -9,7 +9,7 @@ const app = express();
 
 //middlewares
 app.use(morgan('dev'));
-app.use(json());
+// app.use(json());
 
 //routes
 app.use(projectRoutes);
