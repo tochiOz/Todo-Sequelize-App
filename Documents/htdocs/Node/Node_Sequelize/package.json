@@ -13,7 +13,12 @@
 		"type": "git",
 		"url": "git+https://github.com/Tueloper/Sequelize-app.git"
 	},
-	"keywords": [ "Node", "Sequelize", "App", "Postgress" ],
+	"keywords": [
+		"Node",
+		"Sequelize",
+		"App",
+		"Postgress"
+	],
 	"author": "Tueloper",
 	"license": "ISC",
 	"bugs": {
@@ -22,12 +27,14 @@
 	"homepage": "https://github.com/Tueloper/Sequelize-app#readme",
 	"dependencies": {
 		"@babel/polyfill": "^7.8.3",
+		"body-parser": "^1.19.0",
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
 		"morgan": "^1.9.1",
 		"pg": "^7.18.1",
 		"pg-hstore": "^2.3.3",
-		"sequelize": "^5.21.3"
+		"sequelize": "^5.21.3",
+		"sequelize-cli": "^5.5.1"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.8.4",
