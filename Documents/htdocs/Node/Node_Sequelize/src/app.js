@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 //importing routes
 import todoRoutes from './routes/todo';
 import indexRouters from './routes/index';
+import todoItemsRouter from './routes/todoitem';
 
 const app = express();
 
@@ -23,6 +24,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // );
 
 //routes
-app.use('/api/v1', [ indexRouters, todoRoutes ]);
+app.use('/api/v1', [ indexRouters, todoRoutes, todoItemsRouter ]);
 
 export default app;
