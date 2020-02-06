@@ -1,0 +1,38 @@
+{
+  "name": "node_sequelize",
+  "version": "1.0.0",
+  "description": "A Node app using Sequelize and PostgreSql",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tueloper/Node_Sequelize-App.git"
+  },
+  "keywords": [
+    "Node",
+    "Sequelize",
+    "App",
+    "Postgress"
+  ],
+  "author": "Tueloper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tueloper/Node_Sequelize-App/issues"
+  },
+  "homepage": "https://github.com/Tueloper/Node_Sequelize-App#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.8.3",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "pg": "^7.18.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4"
+  }
+}
