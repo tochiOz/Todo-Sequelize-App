@@ -1,11 +1,23 @@
-import { Router } from 'express';
-const router = new Router();
+import todo from './todo';
+import todoItem from './todoitem';
 
-//welcome message;
-router.get('/', (req, res) => {
-	return res.status(200).send({
-		message: 'Welcome to the Todo Api PostgreSQL and Sequelize App'
+export default (app) => {
+	app.get('/api/v1', (req, res) =>
+		res.status(200).send({
+			status: 'success',
+			data: 'Welcome to the Todo Api PostgreSQL and Sequelize App'
+		})
+	);
+
+	app.get('/', (req, res) => {
+		res.status(200).send('Welcome to chess naija');
 	});
-});
+	app.use('/api/v1', [ todo, todoItem ]);
 
-export default router;
+	app.all('/*', (req, res) =>
+		res.status(404).send({
+			status: 'error',
+			error: 'This route is unavailable on this server'
+		})
+	);
+};
