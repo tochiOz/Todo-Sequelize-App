@@ -10,7 +10,7 @@ export default (app) => {
 	);
 
 	app.get('/', (req, res) => {
-		res.status(200).send('Welcome to chess naija');
+		res.status(200).send('Welcome to Node Sequelize App');
 	});
 	app.use('/api/v1', [ todo, todoItem ]);
 
