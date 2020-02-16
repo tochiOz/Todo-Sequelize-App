@@ -1,26 +1,18 @@
-{
-  "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
-  }
-}
+import { config } from 'dotenv';
+config();
+
+module.exports = {
+	development: {
+		use_env_variable: 'DATABASE_URL_DEV',
+		dialect: 'postgres',
+		logging: false
+	},
+	test: {
+		use_env_variable: 'DATABASE_URL_TEST',
+		dialect: 'postgres'
+	},
+	production: {
+		use_env_variable: 'DATABASE_URL_PROD',
+		dialect: 'postgres'
+	}
+};
